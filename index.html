@@ -1,20 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Responsive Shopping Website </title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Shopping Website</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <!-- Navbar Here -->
     <header>
-        <nav class="navbar">
-           <a href="#" class="logo">
-               Buzz<span>Buy.</span>
-           </a>
-        </nav>
+      <nav class="navbar flex container">
+        <a href="#" class="logo"> Buzz<span>Buy.</span> </a>
+
+        <ul class="navlist flex">
+          <li>
+            <a href="#" class="link link-active">home</a>
+          </li>
+          <li>
+            <a href="#" class="link">shop</a>
+          </li>
+          <li>
+            <a href="#" class="link">page</a>
+          </li>
+          <li>
+            <a href="#" class="link">blog</a>
+          </li>
+          <li>
+            <a href="#" class="link">contact</a>
+          </li>
+          <li class="nav-icons flex">
+            <a href="#" class="icon">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </a>
+            <a href="#" class="icon">
+              <i class="fa-solid fa-user"></i>
+            </a>
+            <a href="#" class="icon icon-active">
+              <i class="fa-solid fa-shopping-bag"></i>
+            </a>
+          </li>
+        </ul>
+        <a href="#" class="hamburger">
+          <i class="fa-solid fa-bars"></i>
+        </a>
+      </nav>
     </header>
+
+    <!-- Section Here -->
+
+    <main>
+        <section class="hero">
+           <div class="hero-content flex container">
+            <div>
+                <h3>Summer Fashion</h3>
+            <h1>New Collection</h1>
+            <h4>Big sale of this week up to <span>30%</span></h4>
+            <button>Shop Now</button>
+            </div>
+           </div>
+        </section>
+        <section class="section">
+             <div class="category-container container">
+                <div class="category">
+                    <img src="Images/for men.jpg">
+                    <button>for Men's</button>
+                </div>
+                <div class="category">
+                    <img src="Images/for kids.jpg">
+                    <button>for Kids's</button>
+                </div>
+                <div class="category">
+                    <img src="Images/for accessories.jpg">
+                    <button>Accessories</button>
+                </div>
+                <div class="category">
+                    <img src="Images/for women.jpg">
+                    <button>for Women's</button>
+                </div>
+             </div>
+        </section>
+    </main>
     <script src="main.js"></script>
-</body>
+  </body>
 </html>
