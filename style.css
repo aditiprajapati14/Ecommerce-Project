@@ -55,6 +55,13 @@ img{
     padding-top: 4rem;
 }
 
+.wrap{
+    flex-wrap: wrap;
+}
+.secondary-bg{
+    background: var(--secondary-clr);
+    padding-block: 2.2rem;
+}
 /* Navbar Styling */
 header{
     background: var(--white-clr);
@@ -316,3 +323,161 @@ h2{
     background: var(--primary-clr);
 }
 
+.sale-container{
+    padding-block: 5rem;
+    text-align: center;
+    background-image: url('Images/sale-image.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.sale-container h3{
+    font-weight: 200;
+    font-size: 1.5rem;
+    line-height: 1.6rem;
+    text-transform: uppercase;
+}
+
+.sale-container h1{
+    font-size: 3.2rem;
+    font-weight: 500;
+    line-height: 4.7rem;
+}
+
+.sale-container .line{
+    width: 15%;
+    background: #c5c5c5;
+}
+
+.sale-container h4{
+    font-size: 1.4rem;
+    color: #6e6e6e;
+    line-height: 3.5rem;
+}
+
+.box{
+    flex: 1;
+    text-align: center;
+    margin-block: 1rem;
+    flex-basis: 200px;
+}
+
+.box .fa-solid{
+    font-size: 1.5rem;
+    color: var(--primary-clr);
+}
+
+h5 a{
+    font-size: 1.1rem;
+    color: var(--light-black);
+    font-weight: 500;
+    line-height: 2rem;
+}
+
+.des{
+    color: #6e6e6e;
+    font-size: .9rem;
+    font-weight: 400;
+}
+
+.blog-container{
+    margin-top: 3rem;
+    gap: 2rem;
+}
+
+.blog-box{
+    flex: 1;
+    position: relative;
+    flex-basis: 300px;
+}
+
+.blog-box::before{
+    content: '';
+    position: absolute;
+    background: rgba(0, 0, 0, .8);
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    z-index: 3;
+    transition: all .3s ease-in-out;
+}
+
+.blog-box:hover::before{
+    width: 100%;
+}
+
+.blog-content{
+    position:absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    z-index: 4;
+    padding-inline: 2rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .5s ease-in-out;
+}
+
+.heading{
+    font-size: 1.7rem;
+    line-height: 4rem;
+    font-weight: 400;
+}
+
+.blog-content *{
+    color: var(--secondary-clr);
+}
+
+.blog-link{
+    font-size: .9rem;
+    font-weight: 600;
+    line-height: 5rem;
+    color: var(--primary-clr);
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    text-transform: uppercase;
+}
+
+.blog-box:hover .blog-content{
+    left: 50%;
+    opacity: 1;
+    visibility: visible;
+}
+
+form{
+    gap: 3rem;
+}
+
+form h3{
+    font-size: 1.4rem;
+}
+
+.input-container{
+    flex:1;
+    align-items: stretch;
+}
+
+#email{
+    border:none;
+    flex:1;
+    font-size: 1rem;
+    padding-left: 1.1rem;
+}
+
+#email:focus{
+    outline: none;
+}
+
+.social-icons{
+    gap:1.2rem;
+    justify-content: flex-end;
+}
+
+.media{
+    font-size: 1.2rem;
+    color: var(--light-black);
+}
