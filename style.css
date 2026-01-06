@@ -487,6 +487,9 @@ form h3{
 .footer-container{
     padding-bottom: 3rem;
 }
+.f-section{
+    background-color: #d8b4a5;
+}
 
 .footer-list{
     flex: 1;
