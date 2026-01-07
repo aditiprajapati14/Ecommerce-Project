@@ -32,9 +32,14 @@
               ><i class="fa-solid fa-magnifying-glass"></i
             ></a>
             <a href="#" class="icon"><i class="fa-solid fa-user"></i></a>
-            <a href="#" class="icon icon-active"
+
+            <a class="icon icon-active cart-btn" type="button">
+              <i class="fa-solid fa-shopping-bag"></i>
+              <span class="drawer-count">0</span>
+            </a>
+            <!-- <a href="#" class="icon icon-active"
               ><i class="fa-solid fa-shopping-bag"></i
-            ></a>
+            ></a> -->
           </li>
         </ul>
 
@@ -56,6 +61,7 @@
               <img
                 src="Images/men-image1.avif"
                 alt=""
+                onclick="redirectToProduct(this)"
               />
               <button class="quick-view">Quick View</button>
             </div>
@@ -68,6 +74,7 @@
               <img
                 src="Images/men-image2.avif"
                 alt=""
+                onclick="redirectToProduct(this)"
               />
               <button class="quick-view">Quick View</button>
             </div>
@@ -83,6 +90,7 @@
               <img
                 src="Images/men-image3.avif"
                 alt=""
+                onclick="redirectToProduct(this)"
               />
               <button class="quick-view">Quick View</button>
             </div>
@@ -95,6 +103,7 @@
               <img
                 src="Images/men-image4.avif"
                 alt=""
+                onclick="redirectToProduct(this)"
               />
               <button class="quick-view">Quick View</button>
             </div>
@@ -107,6 +116,7 @@
               <img
                 src="Images/men-image5.avif"
                 alt=""
+                onclick="redirectToProduct(this)"
               />
               <button class="quick-view">Quick View</button>
             </div>
@@ -119,6 +129,7 @@
               <img
                 src="Images/men-image6.avif"
                 alt=""
+                onclick="redirectToProduct(this)"
               />
               <button class="quick-view">Quick View</button>
             </div>
@@ -159,7 +170,13 @@
           <button class="qty-btn" id="plus">+</button>
         </div>
 
-        <button class="add-cart-btn">Add to Cart</button>
+        <button class="add-cart-btn" onclick="addToCartFromQuickView()">
+              Add to Cart
+            </button>
+
+        <!-- <button class="add-cart-btn" onclick="redirectToProduct()">
+              Add to Cart
+            </button> -->
 
         <a href="#" class="view-details">View More Details</a>
       </div>
@@ -236,9 +253,29 @@
       </div>
     </footer>
 
+    <!-- CART DRAWER -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <div class="cart-drawer" id="cartDrawer">
+      <div class="cart-header">
+        <h3>Cart (<span id="cartCount">0</span> items)</h3>
+        <button id="closeCart">&times;</button>
+      </div>
+
+      <div class="cart-items" id="cartItems"></div>
+
+      <div class="cart-footer">
+        <p>
+          Estimated total:
+          <strong>$<span id="cartTotal">0.00</span></strong>
+        </p>
+        <button class="checkout-btn">Checkout</button>
+      </div>
+    </div>
+
 <!-- ===== JS ===== -->
 <script src="JS/men.js"></script>
-
+<script src="main.js"></script>
     
   </body>
 </html>

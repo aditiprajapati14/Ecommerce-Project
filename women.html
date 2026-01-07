@@ -32,9 +32,16 @@
               ><i class="fa-solid fa-magnifying-glass"></i
             ></a>
             <a href="#" class="icon"><i class="fa-solid fa-user"></i></a>
-            <a href="#" class="icon icon-active"
-              ><i class="fa-solid fa-shopping-bag"></i
-            ></a>
+
+            <a class="icon icon-active cart-btn" type="button">
+              <i class="fa-solid fa-shopping-bag"></i>
+              <span class="drawer-count">0</span>
+            </a>
+            <!-- <a href="cart.html" class="icon icon-active">
+              <i class="fa-solid fa-shopping-bag">
+                <span id="cartCount">0</span>
+              </i>
+            </a> -->
           </li>
         </ul>
 
@@ -53,7 +60,11 @@
         <div class="product-grid">
           <div class="product-card">
             <div class="image-box">
-              <img src="Images/women-image1.avif" alt="" />
+              <img
+                src="Images/women-image1.avif"
+                alt=""
+                onclick="redirectToProduct(this)"
+              />
               <button class="quick-view">Quick View</button>
             </div>
             <h3>Organic Linen Maxi Dress</h3>
@@ -62,7 +73,11 @@
 
           <div class="product-card">
             <div class="image-box">
-              <img src="Images/women-image2.avif" alt="" />
+              <img
+                src="Images/women-image2.avif"
+                alt=""
+                onclick="redirectToProduct(this)"
+              />
               <button class="quick-view">Quick View</button>
             </div>
             <h3>Classic Cotton Tee</h3>
@@ -74,7 +89,11 @@
 
           <div class="product-card">
             <div class="image-box">
-              <img src="Images/women-image3.avif" alt="" />
+              <img
+                src="Images/women-image3.avif"
+                alt=""
+                onclick="redirectToProduct(this)"
+              />
               <button class="quick-view">Quick View</button>
             </div>
             <h3>Linen A-Line Skirt</h3>
@@ -83,7 +102,11 @@
 
           <div class="product-card">
             <div class="image-box">
-              <img src="Images/women-image4.avif" alt="" />
+              <img
+                src="Images/women-image4.avif"
+                alt=""
+                onclick="redirectToProduct(this)"
+              />
               <button class="quick-view">Quick View</button>
             </div>
             <h3>Tussar Silk Cami</h3>
@@ -92,7 +115,11 @@
 
           <div class="product-card">
             <div class="image-box">
-              <img src="Images/women-image5.avif" alt="" />
+              <img
+                src="Images/women-image5.avif"
+                alt=""
+                onclick="redirectToProduct(this)"
+              />
               <button class="quick-view">Quick View</button>
             </div>
             <h3>Organic Cotton Belted Jacket</h3>
@@ -101,7 +128,11 @@
 
           <div class="product-card">
             <div class="image-box">
-              <img src="Images/women-image6.avif" alt="" />
+              <img
+                src="Images/women-image6.avif"
+                alt=""
+                onclick="redirectToProduct(this)"
+              />
               <button class="quick-view">Quick View</button>
             </div>
             <h3>Relaxed Boyfriend Tee</h3>
@@ -140,14 +171,17 @@
               <button class="qty-btn" id="plus">+</button>
             </div>
 
-            <button class="add-cart-btn">Add to Cart</button>
+            <button class="add-cart-btn" onclick="addToCartFromQuickView()">
+              Add to Cart
+            </button>
+            <!-- <button class="add-cart-btn">Add to Cart</button> -->
 
             <a href="#" class="view-details">View More Details</a>
           </div>
         </div>
       </div>
     </div>
-<!-- Footer Here -->
+    <!-- Footer Here -->
     <footer class="section f-section">
       <div class="footer-container container flex wrap">
         <ul class="footer-list">
@@ -215,7 +249,31 @@
         </p>
       </div>
     </footer>
+
+    <!-- CART DRAWER -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <div class="cart-drawer" id="cartDrawer">
+      <div class="cart-header">
+        <h3>Cart (<span id="cartCount">0</span> item)</h3>
+        <button id="closeCart">&times;</button>
+      </div>
+
+      <div class="cart-items" id="cartItems"></div>
+
+      <div class="cart-footer">
+        <div class="cart-total">
+          <span>Estimated total</span>
+          <strong>$<span id="cartTotal">0.00</span></strong>
+        </div>
+
+        <button class="checkout-btn">Checkout</button>
+        <button class="view-cart-btn">View Cart</button>
+      </div>
+    </div>
+
     <!-- ===== JS ===== -->
     <script src="JS/women.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>

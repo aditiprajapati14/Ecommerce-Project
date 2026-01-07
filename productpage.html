@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Classic Cotton Tee</title>
+    <link rel="stylesheet" href="CSS/productpage.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- ===== NAVBAR ===== -->
+
+    <header>
+      <nav class="navbar flex container">
+        <a href="#" class="logo"> Buzz<span>Buy.</span> </a>
+
+        <ul class="navlist flex">
+          <li><a href="index.html" class="link link-active">home</a></li>
+          <li><a href="shop.html" class="link">shop</a></li>
+          <li><a href="women.html" class="link">women</a></li>
+          <li><a href="men.html" class="link">men</a></li>
+          <li><a href="aboutus.html" class="link">about</a></li>
+          <!-- <li><a href="contact.html" class="link">contact</a></li> -->
+
+          <li class="nav-icons flex">
+            <a href="#" class="icon"
+              ><i class="fa-solid fa-magnifying-glass"></i
+            ></a>
+            <a href="#" class="icon"><i class="fa-solid fa-user"></i></a>
+            <a class="icon icon-active cart-btn" type="button">
+              <i class="fa-solid fa-shopping-bag"></i>
+              <span class="drawer-count">0</span>
+            </a>
+            <!-- <a href="#" class="icon icon-active"
+              ><i class="fa-solid fa-shopping-bag"></i
+            ></a> -->
+          </li>
+        </ul>
+
+        <a href="#" class="hamburger">
+          <i class="fa-solid fa-bars"></i>
+        </a>
+      </nav>
+    </header>
+
+    <!-- Product Details page -->
+    <section class="product-page">
+      <!-- LEFT IMAGE -->
+      <div class="product-image">
+        <img id="productImg" src="Images/men-image1.avif" alt="Product Image" />
+      </div>
+
+      <!-- RIGHT CONTENT -->
+      <div class="product-details">
+        <h1 id="productTitle"></h1>
+        <p class="sku">SKU: <span id="productSku"></span></p>
+
+        <p class="price">
+          <span class="old-price" id="oldPrice">$25.00</span>
+          <span class="new-price" id="newPrice">$22.50</span>
+        </p>
+
+        <!-- Quantity -->
+        <div class="qty-section">
+          <label>Quantity *</label>
+          <div class="qty-box">
+            <button>-</button>
+            <input type="text" id="productQty" value="1" readonly />
+            <button>+</button>
+          </div>
+        </div>
+
+        <!-- Buttons -->
+        <button class="btn-outline" onclick="addProductPageToCart()">
+          Add to Cart
+        </button>
+        <!-- <button class="btn-outline" onclick="addToCartFromProductPage()">
+          Add to Cart
+        </button> -->
+        <button class="btn-solid">Buy Now</button>
+      </div>
+    </section>
+
+    <!-- CART DRAWER -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <div class="cart-drawer" id="cartDrawer">
+      <div class="cart-header">
+        <h3>Cart (<span id="cartCount">0</span> items)</h3>
+        <button id="closeCart">&times;</button>
+      </div>
+
+      <div class="cart-items" id="cartItems"></div>
+
+      <div class="cart-footer">
+        <p>
+          Estimated total:
+          <strong>$<span id="cartTotal">0.00</span></strong>
+        </p>
+        <button class="checkout-btn">Checkout</button>
+      </div>
+    </div>
+    <script>
+      function addProductPageToCart() {
+        const product = {
+          title: document.getElementById("productTitle").innerText,
+          sku: document.getElementById("productSku").innerText,
+          price: Number(
+            document.getElementById("newPrice").innerText.replace("$", "")
+          ),
+          image: document.getElementById("productImg").src,
+          qty: Number(document.getElementById("productQty").value),
+        };
+
+        addToCart(product);
+      }
+    </script>
+
+    <script src="main.js"></script>
+  </body>
+</html>

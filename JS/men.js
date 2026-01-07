@@ -44,3 +44,14 @@
     if (qtyInput.value > 1) qtyInput.value--;
   };
 
+function addToCartFromQuickView() {
+  const product = {
+    title: qvTitle.innerText,
+    sku: "SKU001",
+    price: Number(qvNew.innerText.replace("$", "")),
+    image: qvImg.src,
+    qty: Number(qtyInput.value)
+  };
+
+  addToCart(product);
+}
